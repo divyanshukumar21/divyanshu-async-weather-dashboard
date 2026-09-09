@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Real-time weather dashboard using asynchronous JavaScript, Fetch API and REST APIs.">
+<meta name="author" content="Divyanshu Kumar">
+<title>Divyanshu Kumar | Weather Dashboard</title>
+<link rel="stylesheet" href="css/style.css">
+<script src="script.js" defer></script>
+</head><body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
+<header class="site-header">
+  <div class="container navbar">
+    <a class="logo" href="index.html">Divyanshu Kumar</a>
+    <nav aria-label="Main navigation"><ul class="nav-list"><li><a href="index.html" aria-current="page">Home</a></li><li><a href="about.html">About</a></li><li><a href="projects.html">Projects</a></li><li><a href="contact.html">Contact</a></li></ul></nav>
+  </div>
+</header>
+<main id="main-content">
+<section class="hero">
+  <div class="container">
+    <p class="eyebrow">Asynchronous JavaScript & RESTful APIs</p>
+    <h1>Real-Time Weather Dashboard</h1>
+    <p class="hero-text">
+      Build a dynamic weather dashboard by fetching and processing JSON data from public REST APIs using asynchronous JavaScript.
+    </p>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="features-title">
+  <div class="container">
+    <h2 id="features-title">Key Features</h2>
+    <ul class="feature-list">
+      <li>Fetch real-time data using the modern Fetch API and async/await.</li>
+      <li>Implement comprehensive error handling for failed network requests.</li>
+      <li>Parse and dynamically render complex nested JSON objects.</li>
+      <li>Create a search functionality to retrieve weather by city name.</li>
+    </ul>
+  </div>
+</section>
+
+<section class="section section-alt" aria-labelledby="dashboard-title">
+  <div class="container weather-shell">
+    <div class="outcome">
+      <h2 id="dashboard-title">Live Weather Dashboard</h2>
+      <p>Search for a city and retrieve current temperature, humidity and wind speed from a public REST API.</p>
+    </div>
+
+    <section class="card" aria-labelledby="search-title">
+      <h2 id="search-title">Search Weather by City</h2>
+      <form id="weather-form" class="search-form">
+        <label for="city" class="small">City Name
+          <input id="city" name="city" type="text" placeholder="Enter a city, e.g. Delhi" required autocomplete="address-level2">
+        </label>
+        <button class="btn-primary" type="submit">Search Weather</button>
+      </form>
+      <p id="weather-status" class="loading" aria-live="polite">Loading weather data...</p>
+    </section>
+
+    <section id="weather-result" class="card current-weather" aria-live="polite">
+      <div>
+        <p class="small">Current Weather</p>
+        <h2 id="location-name">Loading...</h2>
+      </div>
+
+      <div class="weather-main">
+        <div id="weather-icon" class="weather-icon" aria-hidden="true">🌡️</div>
+        <div>
+          <div id="temperature" class="temperature">--</div>
+          <div id="weather-description" class="weather-description">Loading...</div>
+        </div>
+      </div>
+
+      <div class="metrics">
+        <div class="metric"><span class="small">Feels Like</span><strong id="feels-like">--</strong></div>
+        <div class="metric"><span class="small">Humidity</span><strong id="humidity">--</strong></div>
+        <div class="metric"><span class="small">Wind Speed</span><strong id="wind">--</strong></div>
+        <div class="metric"><span class="small">Data Source</span><strong>REST API</strong></div>
+      </div>
+    </section>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="outcome">
+      <h2>Expected Outcome</h2>
+      <p>A dynamic dashboard that displays accurate, live weather metrics including temperature, humidity and wind speed based on user input.</p>
+    </div>
+  </div>
+</section>
+</main>
+<footer class="site-footer">
+<div class="container">© 2026 Divyanshu Kumar · Asynchronous JavaScript & RESTful APIs</div>
+</footer>
+</body>
+</html>
